@@ -24,8 +24,8 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <!-- Google Font 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
+  <!-- Google Font -->
+  <link rel="stylesheet" href="${basePath}/static/css/googleapis-fonts.css">
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -51,7 +51,7 @@
         <#if !Request["email"]?exists>
       	<input type="email" name='email' id="email" class="form-control" placeholder="Email">
       	</#if>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <span class="glyphicon glyphicon-earphone form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
       	<div id="passwordFocus" class="alert alert-warning" style="display: none;">登录密码不能为空</div>
