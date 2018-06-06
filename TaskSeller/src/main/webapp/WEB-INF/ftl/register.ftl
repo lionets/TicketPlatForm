@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Registration Page</title>
+  <title>小蜜蜂试用 | 注册掌柜账户</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -30,27 +30,44 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="${basePath}/open/index.shtml"><b>小蜜蜂</b>试用</a>
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">Register a new membership</p>
+    <p class="login-box-msg">注 册 一 个 新 的 掌 柜 账 户</p>
 
     <form action="../../index.html" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name">
+        <input type="text" class="form-control" placeholder="平 台 邀 请 码">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="用户名，唯一标识不能修改">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="phone" class="form-control" placeholder="手机号码">
         <span class="glyphicon glyphicon-earphone form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+      	<select name="type" class="form-control">
+        	<option>请 选 择 掌 柜 类 型</option>
+        	<option value="1">淘&nbsp;&nbsp;宝</option>
+        	<option value="2">京&nbsp;&nbsp;东</option>
+        	<option value="3">蘑&nbsp;&nbsp;菇&nbsp;&nbsp;街</option>
+        	<option value="4">拼&nbsp;&nbsp;多&nbsp;&nbsp;多</option>
+        </select>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="掌&nbsp;&nbsp;柜&nbsp;&nbsp;号">
+        <span class="glyphicon glyphicon-home form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="密          码">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password">
+        <input type="password" class="form-control" placeholder="确认密码">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -61,27 +78,23 @@
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox"> 我 同 意 <a href="#"><注册条款></a>
+              <input type="checkbox"> 我 同 意 <a href="#">《注册条款》</a>
             </label>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button id="send" type="button" class="btn btn-info btn-block btn-flat">发验证码</button>
         </div>
         <!-- /.col -->
       </div>
     </form>
 
     <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using
-        Google+</a>
+      <a href="#" class="btn btn-block btn-success btn-flat text-center" style="text-align: center;"> 立 即 注 册  </a>
     </div>
 
-    <a href="${basePath}/u/login.shtml" class="text-center">I already have a membership</a>
+    <a href="${basePath}/u/login.shtml" class="text-center">已有平台账户，立即登录</a>
   </div>
   <!-- /.form-box -->
 </div>
@@ -95,6 +108,9 @@
 <script src="${basePath}/static/js/icheck.min.js"></script>
 <script>
   $(function () {
+  	$("#send").click({
+  		
+  	});
     $('input').iCheck({
       checkboxClass: 'icheckbox_square-blue',
       radioClass: 'iradio_square-blue',

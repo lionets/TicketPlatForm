@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title>小蜜蜂试用 | 掌柜登录</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -43,19 +43,19 @@
       <#if Request["error"]?exists>
       <div id="errorDiv" class="alert alert-danger">用户名或密码错误</div>
       </#if>
+      <div id="emailFocus" class="alert alert-warning" style="display: none;">登录名不能为空</div>
       <div class="form-group has-feedback">
-      	<div id="emailFocus" class="alert alert-warning" style="display: none;">登录名不能为空</div>
       	<#if Request["email"]?exists>
-      	<input type="email" name="email" id="email" class="form-control" value="${Request["email"]}" placeholder="Email">
+      	<input type="email" name="email" id="email" class="form-control" value="${Request["email"]}" placeholder="用户名/手机号">
       	</#if>
         <#if !Request["email"]?exists>
-      	<input type="email" name='email' id="email" class="form-control" placeholder="Email">
+      	<input type="email" name='email' id="email" class="form-control" placeholder="用户名/手机号">
       	</#if>
         <span class="glyphicon glyphicon-earphone form-control-feedback"></span>
       </div>
+      <div id="passwordFocus" class="alert alert-warning" style="display: none;">登录密码不能为空</div>
       <div class="form-group has-feedback">
-      	<div id="passwordFocus" class="alert alert-warning" style="display: none;">登录密码不能为空</div>
-        <input type="password" name="pswd" id="pswd" class="form-control" placeholder="Password">
+        <input type="password" name="pswd" id="pswd" class="form-control" placeholder="登 录 密 码">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
