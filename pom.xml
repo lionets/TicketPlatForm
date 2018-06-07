@@ -316,6 +316,19 @@
 				<version>2.7.4</version>
 			</dependency>
 			<!-- /Spring 升级4+ 依赖的JSON包 -->
+			
+			<!-- Aliyun 短信服务 -->
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-core</artifactId>
+				<version>3.7.1</version> <!-- 注：如提示报错，先升级基础包版，无法解决可联系技术支持 -->
+			</dependency>
+			
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+				<version>1.1.0</version>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>

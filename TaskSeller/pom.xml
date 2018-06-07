@@ -286,6 +286,17 @@
 				<artifactId>jackson-annotations</artifactId>
 			</dependency>
 			<!-- /Spring 升级4+ 依赖的JSON包 -->
+			
+			<!-- Aliyun 短信服务 -->
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-core</artifactId>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+			</dependency>
 
 		</dependencies>
 
