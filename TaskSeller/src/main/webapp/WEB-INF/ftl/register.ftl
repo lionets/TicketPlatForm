@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="${basePath}/static/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="${basePath}/static/css/blue.css">
+  
+  <link rel="stylesheet" href="${basePath}/css/login/style.css"/>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -106,10 +108,23 @@
 <script src="${basePath}/static/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="${basePath}/static/js/icheck.min.js"></script>
+
+<script  src="${basePath}/js/common/MD5.js"></script>
+
+<script  src="${basePath}/js/common/layer/layer.js"></script>
 <script>
   $(function () {
   	$("#send").click({
-  		
+  		var load = layer.load();
+  		$.post("${basePath}/u/subRegister.shtml",$("#_form").serialize() ,function(result){
+			layer.close(load);
+			if(result && result.status!= 200){
+			    return layer.msg(result.message,function(){}),!1;
+			}else{
+				layer.msg('注册成功！' );
+			    window.location.href= result.back_url || "${basePath}/";
+			}
+		},"json");
   	});
     $('input').iCheck({
       checkboxClass: 'icheckbox_square-blue',
